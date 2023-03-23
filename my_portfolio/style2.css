@@ -1,0 +1,97 @@
+/* <section class="hero">
+  <div class="hero-image" id="hero-image"></div>
+  <div class="hero-text">
+    <h1>Welcome to my website</h1>
+    <p>My name is John Doe and I'm a web developer</p>
+  </div>
+</section> */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+}
+
+#hero-image {
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: imageAnimation 20s linear infinite;
+}
+
+@keyframes imageAnimation {
+    0% {
+      background-image: url('image1.jpg');
+    }
+
+    25% {
+      background-image: url('image2.jpg');
+    }
+
+    50% {
+      background-image: url('image3.jpg');
+    }
+
+    75% {
+      background-image: url('image4.jpg');
+    }
+
+    100% {
+      background-image: url('image5.jpg');
+    }
+}
+
+#hero {
+    background-image: url('Images/ayiko.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 
+
+<script>
+  let images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg'];
+  let i = 1;
+  let image = document.getElementById('hero-image');
+
+  setInterval(function() {
+    if (i === images.length) {
+      i = 0;
+    }
+
+    image.style.backgroundImage = `url('${images[i]}')`;
+    i++;
+  }, 5000);
+</script> */
+
+/* 
+const images = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Replace with your image URLs
+const heroImg = document.getElementById("hero-img");
+
+let currentIndex = 0;
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    heroImg.src = images[currentIndex];
+}, 5000); */
